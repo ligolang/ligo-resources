@@ -1,1 +1,1 @@
-# awesome-ligo
+# LIGO Resources
