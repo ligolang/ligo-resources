@@ -19,7 +19,7 @@ Please install this software first on your machine or use online alternative :
 - [ ] [VS Code](https://code.visualstudio.com/download) : as text editor
 - [ ] [ligo](https://ligolang.org/docs/intro/installation/) : high level language that's transpile to michelson low level language and provide lot of development support for Tezos
 
-Then after you can perform a git clone of `https://github.com/ligolang/ligo_resources/training/ligo-koans`
+Then after you can perform a git clone of `https://github.com/ligolang/ligo-resources/training/ligo-koans`
 
 # What's a Koan
 
