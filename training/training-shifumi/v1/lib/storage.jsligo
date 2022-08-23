@@ -1,0 +1,30 @@
+#import "player.jsligo" "Player"
+#import "action.jsligo" "Action"
+#import "round_value.jsligo" "RoundValue"
+#import "round.jsligo" "Round"
+
+export type t = {
+    round   : nat,
+    players : [address,address],
+    rounds  : map<nat, Round.t>,
+};
+
+export const fresh_game = (p1:address, p2:address) : t => {
+    failwith("Should provide a a brand new storage");
+};
+
+const new_game = (storage:t) : t => {
+    failwith("Should create a new game");
+};
+
+export const get_player = (storage:t, player:address) : option<Player.t> => {
+    failwith("Should return the player corresponding to the given address or nothing");
+};
+
+export const get_current_round = (storage: t) : option<Round.t> => {
+    failwith("Should return the current round or nothing");
+};
+
+export const update_round = (storage: t, round: Round.t): t => {
+    failwith("Should update the storage");
+};

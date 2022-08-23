@@ -1,0 +1,40 @@
+#import "common/todo.jsligo" "K"
+
+/*
+    The option type is a predefined variant type that is used to express 
+    whether there is a value of some type or none. This is especially useful
+    when calling a partial function, that is, a function that is not defined 
+    for some inputs. In that case, the value of the option type would be None, 
+    otherwise Some (v), where v is some meaningful value of any type.
+*/
+
+/*
+   Write the divide operation returning `None` when we try to divide by `0` or 
+   the division in a `Some`.
+*/
+
+export const div = (a:int, b: int): option<int> => {
+    K.todo("Should divide and return the result in a Some, or Return None when it's not possible");
+};
+
+/*
+  Given a function which acts on int, write the function with an option and
+  a function which performs the paramtric function when it's a Some and do
+  nothing when it's a None.
+*/
+
+export const map = (f:((n:int) => int), s: option<int>): option<int> => {
+    K.todo("Should apply the function on the value in a Some and return an option with the new value, Return None otherwise");
+};
+
+/* 
+  Write the function returning the first character as a string or nothing. The string can be the empty one i.e. "".
+*/
+
+export const first = (n: string) : option<string> => {
+    K.todo("Should return The first character of n");
+}
+
+/*
+    Reference: https://ligolang.org/docs/language-basics/unit-option-pattern-matching#optional-values
+*/

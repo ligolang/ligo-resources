@@ -1,0 +1,23 @@
+#import "common/todo.jsligo" "K"
+
+/*
+  Write a function able to compute the factorial.
+  This function should be recursive and don't use 
+*/
+
+export const factorial = (n:nat) : nat => {
+    K.todo("Should compute factorial using a recursive function");
+};
+
+/*
+  Write a function able to sum all element of a given list of integers.
+  This function should be recursive and don't use 
+*/
+
+export const sum_all = (l:list<int>) : int => {
+    K.todo("Should sum all elements of the list using a recursive function");
+};
+
+/*
+    Reference: https://ligolang.org/docs/language-basics/functions#recursive-function
+*/

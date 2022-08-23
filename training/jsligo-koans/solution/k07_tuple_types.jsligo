@@ -1,0 +1,18 @@
+#import "common/todo.jsligo" "K"
+
+/*
+    Tuples gather a given number of values in a specific order and those values, 
+    called components, can be retrieved by their index (position).
+*/
+
+type point = [int,int];
+
+let new_point = (x:int,y:int): point => [x,y];
+
+let abscissa = (p:point): int => p[0];
+
+let ordinate = (p:point): int => p[1];
+
+/*
+    Reference: https://ligolang.org/docs/language-basics/sets-lists-tuples#tuples
+*/

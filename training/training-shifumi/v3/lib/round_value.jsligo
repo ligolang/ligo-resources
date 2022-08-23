@@ -1,0 +1,45 @@
+#import "utils/chest.jsligo" "Chest"
+#import "action.jsligo" "Action"
+
+export type t = 
+| ["Waiting"] 
+| ["Played", chest] 
+| ["Revealed", Action.t];
+
+export const waiting : t = Waiting();
+
+export const is_waiting = (round_value:t) : bool => {
+    return match(round_value, {
+        Waiting: () => true,
+        Played: _p => false,
+        Revealed: _p => false
+    });
+};
+
+export const is_played = (round_value:t) : bool => {
+    return match(round_value, {
+        Waiting: () => false,
+        Played: _p => true,
+        Revealed: _p => false
+    });
+};
+
+export const is_revealed = (round_value:t) : bool => {
+    return match(round_value, {
+        Waiting: () => false,
+        Played: _p => false,
+        Revealed: _p => true
+    });
+};
+
+export const play = (round_value:t, action:chest, amount: tez) : t => {
+    failwith("Should provide a play action for a given round_value and chest");
+};
+
+export const reveal = (round_value:t, decode: (chest:chest) => Action.t) : t => {
+    failwith("Should provide a reveal action for a given round_value, chest decoder");
+};
+
+export const get_revealed = (round_value_player1:t, round_value_player2:t) : option<{player1:[Action.t,tez],player2:[Action.t,tez]}> => {
+    failwith("Should provide a reveal actions and amout or nothing if the round is not completed");
+};

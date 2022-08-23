@@ -1,0 +1,14 @@
+#import "common/check.jsligo" "Check"
+#import "../lib/k11_list_type.jsligo" "Koan"
+
+const case01 = ():unit => Check.assert_equal(Koan.is_empty(list([]) as list<int>), true);
+const case02 = ():unit => Check.assert_equal(Koan.is_empty(list([1,2])), false);
+const case03 = ():unit => Check.assert_equal(Koan.head(Koan.no_ints()), (None() as option<int>));
+const case04 = ():unit => Check.assert_equal(Koan.head(Koan.cons(2, Koan.no_ints())), Some(2));
+const case05 = ():unit => Check.assert_equal(Koan.increment(Koan.cons(1,Koan.cons(2, Koan.no_ints()))), list([2,3]));
+const case06 = ():unit => Check.assert_equal(Koan.add_all(Koan.cons(1,Koan.cons(2, Koan.no_ints()))), 3);
+const case07 = ():unit => Check.assert_equal(Koan.reverse(Koan.cons(1,Koan.cons(2, Koan.no_ints()))), list([2,1]));
+
+const test = Check.cases(list([ 
+    case01, case02, case03, case04, case05, case06, case07
+]));
